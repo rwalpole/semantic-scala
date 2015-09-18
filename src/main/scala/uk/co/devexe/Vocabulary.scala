@@ -1,6 +1,6 @@
 package uk.co.devexe
 
-import com.hp.hpl.jena.rdf.model.ModelFactory
+import com.hp.hpl.jena.rdf.model.{Model, ModelFactory}
 
 /**
  * Created by walpolrx on 13/07/2015.
@@ -11,5 +11,9 @@ object Vocabulary {
   val MODEL = ModelFactory.createDefaultModel;
   val VARIABLE_PROPERTY = MODEL.createProperty(SPARQL_RESULT_URI, "variable")
   val VALUE_PROPERTY = MODEL.createProperty(SPARQL_RESULT_URI, "value")
+
+  def createModel: Model = {
+    ModelFactory.createDefaultModel
+  }
 
 }
